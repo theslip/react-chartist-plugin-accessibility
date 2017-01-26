@@ -19,14 +19,9 @@ export default class ChartistAccessibility extends Component {
     this.multiPoint = data.series.length > 1
   }
 
-  getSeries () {
-    const { data } = this.props
-    return this.multiPoint ? data.series.map((s) => s.map((_s) => this.valueTransform(_s))) : data.series.map((s) => this.valueTransform(s))
-  }
-
   render () {
     const { data, caption, seriesHeader, summary, elementId, visuallyHiddenStyles } = this.props
-    const series = this.getSeries()
+    console.log(data)
     return (
       <div style={visuallyHiddenStyles || {position: 'absolute', left: -10000, top: 'auto', width: 1, height: 1, overflow: 'hidden'}} id={elementId || this.getId()}>
         <table summary={summary}>
@@ -49,7 +44,12 @@ export default class ChartistAccessibility extends Component {
                 {!this.multiPoint &&
                   <tr>
                      <th scope='row' role='rowheader'>1. Series</th>
-                     {series.map((s, i) => <td key={i}>{this.valueTransform(s)}</td>)}
+                     {data.series[0].map((s, i) => {
+                       console.log(s, this.valueTransform(s))
+                       return (
+                         <td key={i}>{this.valueTransform(s)}</td>
+                       )
+                     })}
                   </tr>
                 }
              </tbody>
