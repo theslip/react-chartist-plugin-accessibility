@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p dist && babel ./src/index.js -o ./dist/index.js"
+    "build": "babel src --out-dir dist"
   },
   "repository": {
     "type": "git",
