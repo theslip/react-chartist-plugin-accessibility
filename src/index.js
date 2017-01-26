@@ -45,7 +45,6 @@ export default class ChartistAccessibility extends Component {
                   <tr>
                      <th scope='row' role='rowheader'>1. Series</th>
                      {data.series[0].map((s, i) => {
-                       console.log(s, this.valueTransform(s))
                        return (
                          <td key={i}>{this.valueTransform(s)}</td>
                        )
