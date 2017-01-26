@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir -p dist && babel index.js -o dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,10 @@
   "dependencies": {
     "chartist": "^0.10.1",
     "node-uuid": "^1.4.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.22.0"
   }
 }
