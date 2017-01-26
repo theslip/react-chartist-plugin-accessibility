@@ -2,5 +2,5 @@
 
 ### Installation
 ```
-$ npm install react-chartist-plugin-accessibility --save
+$ npm install chartist-react-plugin-accessibility --save
 ```
