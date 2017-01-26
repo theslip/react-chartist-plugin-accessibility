@@ -1,0 +1,23 @@
+{
+  "name": "react-chartist-plugin-accessibility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theslip/react-chartist-plugin-accessibility.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theslip/react-chartist-plugin-accessibility/issues"
+  },
+  "homepage": "https://github.com/theslip/react-chartist-plugin-accessibility#readme",
+  "dependencies": {
+    "chartist": "^0.10.1",
+    "node-uuid": "^1.4.7"
+  }
+}
