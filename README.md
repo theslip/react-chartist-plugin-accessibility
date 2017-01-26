@@ -1,4 +1,5 @@
-# react-chartist-plugin-accessibility
+react-chartist-plugin-accessibility
+==============
 
 ### Installation
 
