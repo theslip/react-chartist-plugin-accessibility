@@ -1,7 +1,8 @@
 # react-chartist-plugin-accessibility
 
 Accessibility plugin for [react-chartist](https://github.com/fraserxu/react-chartist).
-###### Note: this module is waiting on this [PR](https://github.com/fraserxu/react-chartist/pull/49).
+
+*Note: this module is waiting on this [PR](https://github.com/fraserxu/react-chartist/pull/49).*
 
 ### Installation
 
