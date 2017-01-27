@@ -1,5 +1,7 @@
 # react-chartist-plugin-accessibility
 
+Accessibility plugin for [react-chartist](https://github.com/fraserxu/react-chartist).
+
 ### Installation
 
 ```
