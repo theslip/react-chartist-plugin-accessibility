@@ -14,14 +14,27 @@ export default class ChartistAccessibility extends Component {
     return `${_valueTransform(value)}`
   }
 
-  componentDidMount () {
-    const { data } = this.props
-    this.multiPoint = data.series.length > 1
+  stripAtrributes (data) {
+    const { series, labels } = data
+    const dataIsObj = series.every((element) => typeof element === 'object')
+    const dataIsInt = series.every((element) => !isNaN(element))
+    const dataIsString = series.every((element) => typeof element === 'string')
+    return {
+      labels,
+      series: [series.map((s) => {
+        if (dataIsObj && s.value) {
+          return s.value
+        } else if (dataIsInt || dataIsString) {
+          return s
+        }
+      })]
+    }
   }
 
   render () {
     const { data, caption, seriesHeader, summary, elementId, visuallyHiddenStyles } = this.props
-    console.log(data)
+    const multiPoint = data.series.length > 1
+    const _data = this.stripAtrributes(data)
     return (
       <div style={visuallyHiddenStyles || {position: 'absolute', left: -10000, top: 'auto', width: 1, height: 1, overflow: 'hidden'}} id={elementId || this.getId()}>
         <table summary={summary}>
@@ -29,10 +42,10 @@ export default class ChartistAccessibility extends Component {
              <tbody>
                 <tr>
                   <th scope='col' role='columnheader'>{seriesHeader}</th>
-                  {data.labels.map((l, i) => <th key={i} scope='col' role='columnheader'>{l}</th>)}
+                  {_data.labels.map((l, i) => <th key={i} scope='col' role='columnheader'>{l}</th>)}
                 </tr>
-                {this.multiPoint &&
-                  data.series.map((s, i) => {
+                {multiPoint &&
+                  _data.series.map((s, i) => {
                     return (
                       <tr key={i}>
                         <th scope='row' role='rowheader'>{`${i + 1}. Series`}</th>
@@ -41,10 +54,11 @@ export default class ChartistAccessibility extends Component {
                     )
                   })
                 }
-                {!this.multiPoint &&
+                {!multiPoint &&
                   <tr>
                      <th scope='row' role='rowheader'>1. Series</th>
-                     {data.series[0].map((s, i) => {
+                     {console.log(_data.series)}
+                     {_data.series[0].map((s, i) => {
                        return (
                          <td key={i}>{this.valueTransform(s)}</td>
                        )
