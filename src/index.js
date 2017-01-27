@@ -57,7 +57,6 @@ export default class ChartistAccessibility extends Component {
                 {!multiPoint &&
                   <tr>
                      <th scope='row' role='rowheader'>1. Series</th>
-                     {console.log(_data.series)}
                      {_data.series[0].map((s, i) => {
                        return (
                          <td key={i}>{this.valueTransform(s)}</td>
