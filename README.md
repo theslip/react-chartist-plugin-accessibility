@@ -7,7 +7,7 @@ Accessibility plugin for [react-chartist](https://github.com/fraserxu/react-char
 ### Installation
 
 ```
-$ npm i react-chartist-plugin-accessibility
+$ npm i react-chartist-plugin-accessibility --save
 ```
 
 ### Usage
