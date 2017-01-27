@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Chartist from 'chartist'
-import uuid from 'node-uuid'
+import uuid from 'uuid'
 
 export default class ChartistAccessibility extends Component {
   getId () {
