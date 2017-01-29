@@ -1,6 +1,6 @@
 {
   "name": "react-chartist-plugin-accessibility",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React accessibility plugin for react-chartist",
   "main": "index.js",
   "scripts": {
