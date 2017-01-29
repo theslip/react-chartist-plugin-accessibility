@@ -16,18 +16,17 @@ export default class ChartistAccessibility extends Component {
 
   stripAtrributes (data) {
     const { series, labels } = data
-    const dataIsObj = series.every((element) => typeof element === 'object')
-    const dataIsInt = series.every((element) => !isNaN(element))
-    const dataIsString = series.every((element) => typeof element === 'string')
+    const isMultiDimensional = series.every((element) => Array.isArray(element))
+    const _series = series.map((s) => {
+      if (s.value) {
+        return s.value
+      } else {
+        return s
+      }
+    })
     return {
       labels,
-      series: [series.map((s) => {
-        if (dataIsObj && s.value) {
-          return s.value
-        } else if (dataIsInt || dataIsString) {
-          return s
-        }
-      })]
+      series: isMultiDimensional ? _series : [_series]
     }
   }
 
