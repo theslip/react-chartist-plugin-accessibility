@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/theslip/react-chartist-plugin-accessibility.git"
   },
-  "author": "",
+  "author": "David Rutsch",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/theslip/react-chartist-plugin-accessibility/issues"
