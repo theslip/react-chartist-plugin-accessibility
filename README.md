@@ -2,8 +2,6 @@
 
 Accessibility plugin for [react-chartist](https://github.com/fraserxu/react-chartist).
 
-##### *Note: this module won't work until this [pull request](https://github.com/fraserxu/react-chartist/pull/49) is merged in or a separate fork is published.*
-
 ### Installation
 
 ```
