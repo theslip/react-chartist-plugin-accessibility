@@ -1,16 +1,16 @@
 {
   "name": "react-chartist-plugin-accessibility",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "React accessibility plugin for react-chartist",
   "main": "index.js",
   "keywords": [
-   "react",
-   "component",
-   "chartist",
-   "graph",
-   "accessibility",
-   "react-chartist"
- ],
+    "react",
+    "component",
+    "chartist",
+    "graph",
+    "accessibility",
+    "react-chartist"
+  ],
   "scripts": {
     "build": "babel src --out-dir dist",
     "prepublish": "npm run build"
