@@ -1,7 +1,7 @@
 # react-chartist-plugin-accessibility
 
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)][npm-url]
-[![npm](https://img.shields.io/npm/v/npm.svg)][npm-url]
+[![NPM Downloads](https://img.shields.io/npm/dt/express.svg)][npm-url]
+[![NPM Version](https://img.shields.io/npm/v/npm.svg)][npm-url]
 
 
 Accessibility plugin for [react-chartist](https://github.com/fraserxu/react-chartist).
