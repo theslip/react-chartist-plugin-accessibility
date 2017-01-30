@@ -1,9 +1,5 @@
 # react-chartist-plugin-accessibility
 
-[![NPM Downloads](https://img.shields.io/npm/dt/express.svg)][npm-url]
-[![NPM Version](https://img.shields.io/npm/v/npm.svg)][npm-url]
-
-
 Accessibility plugin for [react-chartist](https://github.com/fraserxu/react-chartist).
 
 ### Installation
