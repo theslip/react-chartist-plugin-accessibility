@@ -11,7 +11,6 @@ $ npm i react-chartist-plugin-accessibility --save
 ### Usage
 
 ```javascript
-// @flow
 import React, { Component } from 'react'
 import ChartistGraph from 'react-chartist'
 import ChartistAccessibility from 'react-chartist-plugin-accessibility'
