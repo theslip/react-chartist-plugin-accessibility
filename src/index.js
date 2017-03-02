@@ -40,14 +40,14 @@ export default class ChartistAccessibility extends Component {
           <caption>{caption || 'A  graphical chart'}</caption>
              <tbody>
                 <tr>
-                  <th scope='col' role='columnheader'>{seriesHeader}</th>
-                  {_data.labels.map((l, i) => <th key={i} scope='col' role='columnheader'>{l}</th>)}
+                  <th scope='col'>{seriesHeader}</th>
+                  {_data.labels.map((l, i) => <th key={i} scope='col'>{l}</th>)}
                 </tr>
                 {multiPoint &&
                   _data.series.map((s, i) => {
                     return (
                       <tr key={i}>
-                        <th scope='row' role='rowheader'>{`${i + 1}. Series`}</th>
+                        <th scope='row'>{`${i + 1}. Series`}</th>
                         {s.map((ss, ii) => <td key={ii}>{this.valueTransform(ss)}</td>)}
                       </tr>
                     )
@@ -55,7 +55,7 @@ export default class ChartistAccessibility extends Component {
                 }
                 {!multiPoint &&
                   <tr>
-                     <th scope='row' role='rowheader'>1. Series</th>
+                     <th scope='row'>1. Series</th>
                      {_data.series[0].map((s, i) => {
                        return (
                          <td key={i}>{this.valueTransform(s)}</td>
