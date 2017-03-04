@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/theslip/react-chartist-plugin-accessibility#readme",
   "dependencies": {
-    "chartist": "^0.10.1",
     "react": "^15.4.2",
     "uuid": "^3.0.1"
   },

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Chartist from 'chartist'
 import uuid from 'uuid'
 
 export default class ChartistAccessibility extends Component {
@@ -10,8 +9,12 @@ export default class ChartistAccessibility extends Component {
 
   valueTransform (value) {
     const { valueTransform } = this.props
-    const _valueTransform = typeof valueTransform === 'function' ? valueTransform : Chartist.noop
+    const _valueTransform = typeof valueTransform === 'function' ? valueTransform : (value) => value
     return `${_valueTransform(value)}`
+  }
+
+  componentDidMount () {
+    this.Chartist = require('chartist')
   }
 
   stripAtrributes (data) {
