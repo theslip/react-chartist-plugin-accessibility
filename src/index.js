@@ -13,10 +13,6 @@ export default class ChartistAccessibility extends Component {
     return `${_valueTransform(value)}`
   }
 
-  componentDidMount () {
-    this.Chartist = require('chartist')
-  }
-
   stripAtrributes (data) {
     const { series, labels } = data
     const isMultiDimensional = series.every((element) => Array.isArray(element))
