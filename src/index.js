@@ -46,7 +46,7 @@ export default class ChartistAccessibility extends Component {
                   _data.series.map((s, i) => {
                     return (
                       <tr key={i}>
-                        <th scope='row'>{`${i + 1}. Series`}</th>
+                        <th scope='row'>{`${i + 1}. ${s?.name === undefined ? 'Series': s?.name}`}</th>
                         {s.map((ss, ii) => <td key={ii}>{this.valueTransform(ss)}</td>)}
                       </tr>
                     )
@@ -54,7 +54,7 @@ export default class ChartistAccessibility extends Component {
                 }
                 {!multiPoint &&
                   <tr>
-                     <th scope='row'>1. Series</th>
+                     <th scope='row'>{`1. ${s?.name === undefined ? 'Series': s?.name}`}</th>
                      {_data.series[0].map((s, i) => {
                        return (
                          <td key={i}>{this.valueTransform(s)}</td>
